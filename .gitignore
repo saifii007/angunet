@@ -1,0 +1,87 @@
+# ==========================
+# Visual Studio
+# ==========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# ==========================
+# .NET Build
+# ==========================
+bin/
+obj/
+
+[Dd]ebug/
+[Rr]elease/
+
+*.pdb
+*.cache
+*.ilk
+
+# Rider
+.idea/
+
+# ==========================
+# NuGet
+# ==========================
+packages/
+*.nupkg
+
+# ==========================
+# ASP.NET
+# ==========================
+appsettings.Development.json
+appsettings.Local.json
+
+# EF Core
+Migrations/*.Designer.cs
+
+# ==========================
+# Angular
+# ==========================
+client/node_modules/
+client/dist/
+client/.angular/
+client/coverage/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# pnpm
+.pnpm-store/
+
+# ==========================
+# Angular Environment Files
+# ==========================
+client/src/environments/environment.local.ts
+
+# ==========================
+# OS Files
+# ==========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================
+# Logs
+# ==========================
+logs/
+*.log
+
+# ==========================
+# Generated DTOs (optional)
+# ==========================
+# Uncomment if generated automatically
+
+# client/src/app/models/generated/
+# server/MyFramework.Application/DTOs/Generated/
+
+# ==========================
+# Shared Generator Temp Files
+# ==========================
+*.tmp
+*.bak
