@@ -1,0 +1,23 @@
+name: angunet
+
+services:
+  api:
+    build:
+      context: ./angunet-server
+      dockerfile: angunet-API/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_HTTP_PORTS: "8080"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ./angunet-ui
+      dockerfile: Dockerfile
+    depends_on:
+      - api
+    ports:
+      - "4200:80"
+    restart: unless-stopped

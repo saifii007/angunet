@@ -7,4 +7,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\angunet-Domain\angunet-Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="Interfaces\IServices\" />
+    <Folder Include="Interfaces\IRepositories\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>

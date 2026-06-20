@@ -1,1 +1,6 @@
-<Solution />
+<Solution>
+  <Project Path="angunet-API/angunet-API.csproj" />
+  <Project Path="angunet-Application/angunet-Application.csproj" />
+  <Project Path="angunet-Domain/angunet-Domain.csproj" />
+  <Project Path="angunet-Infrastructure/angunet-Infrastructure.csproj" />
+</Solution>

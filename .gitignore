@@ -1,87 +1,73 @@
-# ==========================
-# Visual Studio
-# ==========================
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE and editor state
 .vs/
-*.user
+.vscode/
+.idea/
 *.suo
+*.user
 *.userosscache
 *.sln.docstates
 
-# ==========================
-# .NET Build
-# ==========================
+# .NET build output and tooling
 bin/
 obj/
-
 [Dd]ebug/
 [Rr]elease/
-
+TestResults/
+coverage/
 *.pdb
 *.cache
 *.ilk
-
-# Rider
-.idea/
-
-# ==========================
-# NuGet
-# ==========================
-packages/
 *.nupkg
+packages/
 
-# ==========================
-# ASP.NET
-# ==========================
+# ASP.NET local configuration and secrets
 appsettings.Development.json
 appsettings.Local.json
+appsettings.*.Local.json
+secrets.json
 
-# EF Core
-Migrations/*.Designer.cs
+# Angular / Node dependencies and generated output
+node_modules/
+dist/
+.angular/
+coverage/
+.npm/
+.pnpm-store/
 
-# ==========================
-# Angular
-# ==========================
-client/node_modules/
-client/dist/
-client/.angular/
-client/coverage/
+# Local frontend environment overrides
+environment.local.ts
+environment.*.local.ts
 
-# npm
+# Environment files: commit an example file, never local values
+.env
+.env.*
+!.env.example
+
+# Logs and temporary files
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# pnpm
-.pnpm-store/
-
-# ==========================
-# Angular Environment Files
-# ==========================
-client/src/environments/environment.local.ts
-
-# ==========================
-# OS Files
-# ==========================
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# ==========================
-# Logs
-# ==========================
-logs/
-*.log
-
-# ==========================
-# Generated DTOs (optional)
-# ==========================
-# Uncomment if generated automatically
-
-# client/src/app/models/generated/
-# server/MyFramework.Application/DTOs/Generated/
-
-# ==========================
-# Shared Generator Temp Files
-# ==========================
+pnpm-debug.log*
 *.tmp
+*.temp
 *.bak
+*.swp
+*~
+
+# Docker local overrides and runtime data
+docker-compose.override.yml
+docker-compose.*.override.yml
+docker-data/
+
+# Local certificates
+*.pfx
+*.p12
+*.pem
+*.key
