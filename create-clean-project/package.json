@@ -1,0 +1,62 @@
+{
+  "name": "angunet",
+  "version": "1.0.2",
+  "description": "Create a production-ready Clean Architecture project with Angular, .NET, SQL Server, MongoDB, and Docker.",
+  "keywords": [
+    "angular",
+    "dotnet",
+    "clean-architecture",
+    "cli",
+    "scaffold",
+    "sql-server",
+    "mongodb",
+    "docker"
+  ],
+  "homepage": "https://github.com/saifii007/angunet#readme",
+  "bugs": {
+    "url": "https://github.com/saifii007/angunet/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saifii007/angunet.git"
+  },
+  "license": "MIT",
+  "author": "saifii007",
+  "type": "module",
+  "bin": {
+    "angunet": "bin/index.js",
+    "create-clean-project": "bin/index.js"
+  },
+  "exports": {
+    "./cli": "./src/cli.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "config",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node --check bin/index.js && node --check src/cli.js && node --check src/template.js && node bin/index.js --help",
+    "test": "node --test",
+    "prepublishOnly": "npm run check && npm test",
+    "version:patch": "npm version patch",
+    "version:minor": "npm version minor",
+    "version:major": "npm version major",
+    "publish:public": "npm publish --access public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^15.0.0",
+    "degit": "^3.4.7",
+    "fs-extra": "^11.3.5",
+    "inquirer": "^14.0.2"
+  }
+}

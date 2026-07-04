@@ -1,0 +1,24 @@
+{
+  "name": "create-clean-project",
+  "version": "1.0.2",
+  "description": "Command alias for the angunet Clean Project CLI.",
+  "license": "MIT",
+  "author": "saifii007",
+  "type": "module",
+  "bin": {
+    "create-clean-project": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "angunet": "^1.0.2"
+  }
+}

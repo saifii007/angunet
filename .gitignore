@@ -71,3 +71,9 @@ docker-data/
 *.p12
 *.pem
 *.key
+
+# NPM CLI entry points (not .NET build output)
+!create-clean-project/bin/
+!create-clean-project/bin/index.js
+!create-clean-project/alias-package/bin/
+!create-clean-project/alias-package/bin/index.js
