@@ -1,0 +1,49 @@
+name: Publish npm packages
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          cache: npm
+          cache-dependency-path: create-clean-project/package-lock.json
+
+      - name: Install CLI dependencies
+        working-directory: create-clean-project
+        run: npm ci
+
+      - name: Test CLI
+        working-directory: create-clean-project
+        run: npm test
+
+      - name: Check CLI package
+        working-directory: create-clean-project
+        run: npm run check
+
+      - name: Publish angunet
+        working-directory: create-clean-project
+        run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish create-clean-project alias
+        working-directory: create-clean-project/alias-package
+        run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
