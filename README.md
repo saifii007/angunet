@@ -2,7 +2,11 @@
 
 <div align="center">
 
-<img src="docs/assets/banner.png" alt="ANGUNET Banner" width="100%">
+  <img
+    src="https://raw.githubusercontent.com/saifii007/angunet/main/doc/Angunet%20Clean%20Architecture%20Banner%20%281%29.png"
+    alt="Angunet - Clean Architecture Full Stack Framework"
+    width="100%"
+  />
 
 ### A Modern Full-Stack Framework for Angular + .NET
 
