@@ -54,7 +54,7 @@ It includes:
 ## ⚡ Generate a Project in Seconds
 
 ```bash
-npx angunet yapp my-app --no-install --yes
+npx angunet my-app
 ```
 
 ANGUNET generates a production-ready application structure instantly.
@@ -187,7 +187,7 @@ Or launch everything with Docker.
 Create a new project
 
 ```bash
-npx angunet yapp my-app
+npx angunet my-app
 ```
 
 Additional options
